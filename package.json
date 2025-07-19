@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "gulp watch"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "laravel-elixir": "^5.0.0",
+    "bootstrap-sass": "^3.0.0"
+  },
+  "require": {
+  "laravelcollective/html": "^5.2.0",
+  "laracasts/flash": "^2.0",
+  "maatwebsite/excel": "~2.1.0"
+  },
+}

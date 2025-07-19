@@ -1,0 +1,23 @@
+  .btn-plus{
+    position: absolute;
+    top: 12px;    
+  }
+
+.btn-plus2{
+    position: absolute;
+    top: 23px;    
+  }
+
+
+  [v-cloak] {
+  display: none;
+}
+
+.edit-item{
+  width: 70% !important;
+}
+
+.info-search{
+  top: 10px;
+  position: relative;
+}

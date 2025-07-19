@@ -1,0 +1,120 @@
+  @extends ('layouts.admin')
+@section ('contenido')
+<div class="row">
+	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+		<h3>Estadísticas2</h3>
+	</div>
+</div>
+
+<?php 
+foreach ($totales as $total)
+{
+?>
+
+
+<div class="row">
+ 
+		<div class="col-lg-2 col-xs-6">
+		<!-- small box -->
+			<div class="small-box bg-red">
+				<div class="inner">
+					<p>CLLIENTES</p><h4 style="font-size:17px;"><strong>32</strong></h4>
+				</div>
+				<a href="{{url('ventas/cliente')}}" class="small-box-footer">CLLIENTES <i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+		
+		<div class="col-lg-2 col-xs-6">
+		<!-- small box -->
+			<div class="small-box bg-aqua">
+				<div class="inner">
+					<p>PRODUCTOS</p> <h4 style="font-size:17px;"><strong><?php echo $total->totalitems;?></strong></h4>
+				</div>
+				<a href="{{url('almacen/item')}}" class="small-box-footer">PRODUCTOS <i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+		
+		<div class="col-lg-2 col-xs-6">
+		<!-- small box -->
+			<div class="small-box bg-yellow">
+				<div class="inner">
+					<p>USUARIOS</p> <h4 style="font-size:17px;"><strong>7</strong></h4>
+				</div>
+				<a href="{{url('seguridad/usuario')}}" class="small-box-footer">USUARIOS <i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+    
+
+		<div class="col-lg-2 col-xs-6">
+		<!-- small box -->
+			<div class="small-box bg-red">
+				<div class="inner">
+					<p>CATEGORIAS</p> <h4 style="font-size:17px;"><strong>8</strong></h4>
+				</div>
+				<a href="{{url('almacen/categoria')}}" class="small-box-footer">CATEGORIAS <i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+
+          
+
+</div>
+
+
+<div class="row">
+ 
+		<div class="col-lg-2 col-xs-6">
+		<!-- small box -->
+			<div class="small-box bg-yellow">
+				<div class="inner">
+					<p>COMPRAS</p> 
+				</div>
+				<a href="{{url('compras/orden')}}" class="small-box-footer">COMPRAS <i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+		
+		<div class="col-lg-2 col-xs-6">
+		<!-- small box -->
+			<div class="small-box bg-green">
+				<div class="inner">
+					<p>HACER VENTA</p> 
+				</div>
+				<a href="{{url('quotes/create')}}" class="small-box-footer">HACER VENTA <i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+		
+		<div class="col-lg-2 col-xs-6">
+		<!-- small box -->
+			<div class="small-box bg-red">
+				<div class="inner">
+					<p>KARDEX</p>  
+				</div>
+				<a href=" " class="small-box-footer">KARDEX <i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+    
+
+		<div class="col-lg-2 col-xs-6">
+		<!-- small box -->
+			<div class="small-box bg-aqua">
+				<div class="inner">
+					<p>REPORTES</p>  
+				</div>
+				<a href="{{url('quotesStd/reports')}}" class="small-box-footer">REPORTES <i class="fa fa-arrow-circle-right"></i></a>
+			</div>
+		</div>
+
+          
+
+</div>
+<?php }?>
+
+
+        <!-- Estadísticas gráficos -->
+        
+
+@push ('scripts')
+ <script src="{{asset('js/Chart.js')}}"></script>
+
+     
+@endpush
+@endsection
